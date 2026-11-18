@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#EDEBF3">
+<title>Abdelrhman Mohamed Hassan Mouse | Applied AI &amp; Data Analytics</title>
+<meta name="description" content="Abdelrhman Mohamed Hassan Mouse, Applied AI &amp; Data Analytics. CV, LinkedIn, GitHub and contact details.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Arabic:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --bg: #F6F7F8;
+    --surface: #FFFFFF;
+    --ink: #2C3640;
+    --muted: #75828C;
+    --line: #E6EAED;
+    --accent: #6E5D8F;
+    --accent-hover: #5F5080;
+    --tint: #EDEBF3;
+    --tile: #F0EEF5;
+    --font: "Inter", "Noto Sans Arabic", "Segoe UI", Tahoma, system-ui, sans-serif;
+    --font-ar: "Noto Sans Arabic", "Segoe UI", Tahoma, system-ui, sans-serif;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  html[lang="ar"] body { font-family: var(--font-ar); }
+
+  /* one language visible at a time */
+  .ar { display: none; }
+  html[lang="ar"] .en { display: none; }
+  html[lang="ar"] .ar { display: inline; }
+
+  /* soft tinted top that fades into the page background */
+  .masthead {
+    background: linear-gradient(to bottom, var(--tint) 0, var(--tint) 120px, var(--bg) 100%);
+    padding-block: max(16px, env(safe-area-inset-top, 0px)) 8px;
+    padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px));
+  }
+  .wrap { max-width: 440px; margin: 0 auto; }
+
+  .lang { display: flex; justify-content: flex-end; }
+  .lang-inner { display: inline-flex; background: rgba(255, 255, 255, 0.7); border: 1px solid var(--line); border-radius: 999px; padding: 2px; }
+  .lang button {
+    border: 0; background: transparent; color: var(--muted); font: inherit; font-size: 13px; line-height: 1;
+    padding: 0 14px; min-height: 34px; border-radius: 999px; cursor: pointer;
+  }
+  .lang button[lang="ar"] { font-family: var(--font-ar); font-size: 14px; }
+  .lang button[aria-pressed="true"] { background: var(--surface); color: var(--ink); font-weight: 600; box-shadow: 0 1px 2px rgba(44, 54, 64, 0.1); }
+  button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .hero { display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 18px; gap: 0; }
+  .photo {
+    width: 132px; height: 132px; border-radius: 50%; display: block; object-fit: cover; background: #fff;
+    border: 4px solid #fff; box-shadow: 0 0 0 1px var(--line), 0 8px 24px rgba(44, 54, 64, 0.12);
+  }
+  h1 { font-size: 24px; line-height: 1.3; font-weight: 600; margin: 18px 0 0; letter-spacing: -0.01em; text-wrap: balance; }
+  html[lang="ar"] h1 { letter-spacing: 0; line-height: 1.5; }
+  .role { margin: 6px 0 0; color: var(--accent); font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+  html[lang="ar"] .role { letter-spacing: 0; text-transform: none; font-size: 15px; }
+  .tag { margin: 10px 0 0; color: var(--muted); font-size: 14px; max-width: 30ch; }
+
+  main { padding-block: 22px max(36px, env(safe-area-inset-bottom, 0px)); padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px)); }
+  main .wrap { display: flex; flex-direction: column; gap: 20px; }
+
+  .group-title { margin: 0 0 8px; padding-inline: 4px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  html[lang="ar"] .group-title { letter-spacing: 0; text-transform: none; font-size: 13px; }
+  .group { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: 0 1px 2px rgba(44, 54, 64, 0.03); }
+  .row {
+    display: grid; grid-template-columns: 40px minmax(0, 1fr) 16px; align-items: center; gap: 12px;
+    padding: 12px 14px; min-height: 64px; color: inherit; text-decoration: none;
+    border-top: 1px solid var(--line);
+  }
+  .group > .row:first-child { border-top: 0; }
+  .row:hover { background: #FAFBFB; }
+  .row:has(.value) { grid-template-columns: 40px minmax(0, 1fr); }
+  .icon { width: 40px; height: 40px; border-radius: 11px; background: var(--tile); color: var(--accent); display: grid; place-items: center; }
+  .icon svg { width: 20px; height: 20px; }
+  .texts { display: flex; flex-direction: column; min-width: 0; }
+  .label { font-size: 16px; font-weight: 600; line-height: 1.35; }
+  .hint { font-size: 13px; color: var(--muted); line-height: 1.4; }
+  .hint.top { font-size: 12px; }
+  .value { font-size: 16px; font-weight: 500; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+  .value.email { font-size: clamp(11.5px, 3.7vw, 15.5px); }
+  .value bdi { direction: ltr; }
+  .arrow { width: 16px; height: 16px; color: #A9B4BC; }
+  html[dir="rtl"] .arrow { transform: scaleX(-1); }
+
+  .save {
+    display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px;
+    background: var(--accent); color: #fff; border-radius: 14px; text-decoration: none;
+    font-weight: 600; font-size: 15px; padding: 12px 16px;
+  }
+  .save svg { width: 19px; height: 19px; flex: none; }
+  .save:hover { background: var(--accent-hover); }
+  .save:focus-visible { outline-offset: 3px; }
+
+  footer { text-align: center; font-size: 12px; color: var(--muted); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .row, .save { transition: background-color 0.15s ease; }
+  }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <div class="lang"><div class="lang-inner" role="group" aria-label="Language / اللغة">
+      <button type="button" data-lang="en" lang="en" aria-pressed="true">English</button>
+      <button type="button" data-lang="ar" lang="ar" aria-pressed="false">العربية</button>
+    </div></div>
+
+    <div class="hero">
+      <img class="photo" src="../assets/profile.jpg" width="132" height="132" alt="Portrait of Abdelrhman Mohamed Hassan Mouse">
+      <h1><span class="en">Abdelrhman Mohamed Hassan Mouse</span><span class="ar">عبدالرحمن محمد حسن موس</span></h1>
+      <p class="role"><span class="en">Applied AI &amp; Data Analytics</span><span class="ar">الذكاء الاصطناعي التطبيقي وتحليل البيانات</span></p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section aria-labelledby="t-links">
+      <h2 class="group-title" id="t-links"><span class="en">Profile</span><span class="ar">الملف المهني</span></h2>
+      <div class="group">
+      <a class="row" href="cv.pdf" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6M9 9h2"/></svg></span>
+        <span class="texts"><span class="label"><span class="en">CV</span><span class="ar">السيرة الذاتية</span></span><span class="hint"><span class="en">Resume, PDF</span><span class="ar">ملف PDF</span></span></span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a>
+      <a class="row" href="https://www.linkedin.com/in/abdelrhman-mouse" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.2 8.6H2.1V21h3.1zM3.65 3a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6zM21.9 21v-6.8c0-3.3-1.8-4.9-4.1-4.9-1.9 0-2.7 1-3.2 1.8V8.6h-3.1V21h3.1v-6.5c0-1.7.9-2.7 2.2-2.7 1.3 0 1.9.9 1.9 2.6V21z"/></svg></span>
+        <span class="texts"><span class="label"><span class="en">LinkedIn</span><span class="ar">لينكدإن</span></span><span class="hint"><span class="en">Profile and experience</span><span class="ar">الملف المهني والخبرات</span></span></span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a>
+      <a class="row" href="../assets/infographic.jpg" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><rect x="5" y="12" width="3.5" height="8" rx="0.6"/><rect x="10.25" y="7" width="3.5" height="13" rx="0.6"/><rect x="15.5" y="3.5" width="3.5" height="16.5" rx="0.6"/></svg></span>
+        <span class="texts"><span class="label"><span class="en">Infographic</span><span class="ar">الإنفوجرافيك</span></span><span class="hint"><span class="en">InterviewIQ graduation project</span><span class="ar">مشروع التخرج InterviewIQ</span></span></span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a>
+      <a class="row" href="https://github.com/abdelrhmanmouse" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></span>
+        <span class="texts"><span class="label"><span class="en">GitHub</span><span class="ar">جيت هاب</span></span><span class="hint"><span class="en">Code and projects</span><span class="ar">الأكواد والمشاريع</span></span></span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a>
+      </div>
+    </section>
+
+    <section aria-labelledby="t-contact">
+      <h2 class="group-title" id="t-contact"><span class="en">Contact</span><span class="ar">التواصل</span></h2>
+      <div class="group">
+      <a class="row" href="tel:+201153853104">
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+        <span class="texts"><span class="hint top"><span class="en">Phone</span><span class="ar">الهاتف</span></span><span class="value "><bdi>01153853104</bdi></span></span>
+      </a>
+      <a class="row" href="mailto:abdelrhmanmuhamed780@gmail.com">
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></span>
+        <span class="texts"><span class="hint top"><span class="en">Email</span><span class="ar">البريد الإلكتروني</span></span><span class="value email"><bdi>abdelrhmanmuhamed780<wbr>@gmail.com</bdi></span></span>
+      </a>
+      </div>
+    </section>
+
+    <a class="save" href="contact.vcf" download>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 20h14"/></svg>
+      <span><span class="en">Save contact</span><span class="ar">حفظ جهة الاتصال</span></span>
+    </a>
+
+    <footer><span class="en">Thanks for stopping by.</span><span class="ar">شكرًا لزيارتك</span></footer>
+  </div>
+</main>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var buttons = document.querySelectorAll('.lang button');
+    function setLang(l) {
+      root.lang = l;
+      root.dir = l === 'ar' ? 'rtl' : 'ltr';
+      buttons.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.lang === l ? 'true' : 'false'); });
+      try { localStorage.setItem('lang', l); } catch (e) {}
+    }
+    var saved = 'en';
+    try { saved = localStorage.getItem('lang') || 'en'; } catch (e) {}
+    setLang(saved === 'ar' ? 'ar' : 'en');
+    buttons.forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
+  })();
+</script>
+</body>
+</html>
